@@ -5,4 +5,4 @@ Given an array K with N integers from 1 to N+1 such that the array has exactly o
 * Used intellij IDEA
 * Git clone the program then,
 * To run: right click on app.java and select the run option or,
-* Move to src/main/java directory the run $ javac App.java && java App in the terminal
+* Move to src/main/java directory then run ' $ javac App.java && java App ' in the terminal
