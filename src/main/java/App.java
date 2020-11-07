@@ -35,17 +35,13 @@ public class App {
         }
     }
 
-    public static  int missingInteger(int[] arr) {
-        //sort the array so as to loop through it
+    private static  int missingInteger(int[] arr) {
         Arrays.sort(arr);
-
         int missingInt = 0;
 
-        //initialize integer that increments each time the array is looped through
-        // so as to equate with each array int to find missing number
+        //initialize integer that increments each time the array is looped through so as to equate with each array int to find missing number
         int count = 1;
         for (int value : arr) {
-            //increment count by 1 then check if value is not equals to count, then count is the missing integer and then break the loop
             if (count != value) {
                 missingInt = count;
                 break;
