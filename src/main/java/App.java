@@ -16,13 +16,16 @@ public class App {
 
         //fetch user input to save into the created array
         System.out.println("Please enter array elements of type int");
+        System.out.println("enter 1st element");
         for (int i = 0; i < arrLength; i++) {
             int userInput = sc.nextInt();
             integerInputArray[i] = userInput;
+            System.out.println("enter next element");
         }
 
-        System.out.println("The inputted int array is: ");
-        System.out.println(integerInputArray);
+        System.out.println("The inputted sorted int array is: ");
+        Arrays.sort(integerInputArray);
+        System.out.println(Arrays.toString(integerInputArray));
         if (missingInteger(integerInputArray) == 0){
             System.out.println("There is no missing integer in your array");
         }
@@ -40,13 +43,14 @@ public class App {
 
         //initialize integer that increments each time the array is looped through
         // so as to equate with each array int to find missing number
-        int count = 0;
+        int count = 1;
         for (int value : arr) {
-            //increment count by 1 then check if value is not equals to count, then count is the missing integer
-            count += 1;
+            //increment count by 1 then check if value is not equals to count, then count is the missing integer and then break the loop
             if (count != value) {
                 missingInt = count;
+                break;
             }
+            count += 1;
         }
 
         return missingInt;
